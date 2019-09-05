@@ -3,47 +3,35 @@
     google.charts.load('current', {
   'callback': function () {
     var dataTotal = google.visualization.arrayToDataTable([
-      ['Total', 'Major Obstacle', {role: 'annotation'}, 'Minor Obstacle', {role: 'annotation'}, 'No Obstacle', {role: 'annotation'}],
-      ['Usability',  27, '27%', 49, '49%', 24, '24%'],
-      ['Features and services are not producing enough added value',  29, '29%', 46, '46%', 25, '25%'],
-      ['Lack of quality of the technology',  32, '32%', 49, '49%', 20, '20%'],
-      ['Maturity of the technology',  33, '33%', 49, '49%', 17, '17%'],
-      ['Safety concerns',  34, '34%', 42, '42%', 23, '23%'],
-      ['Lack of trust in the technology',  41, '41%', 38, '38%', 21, '21%'],
-      ['Privacy concerns',  44, '44%', 36, '36%', 20, '20%'],
-      ['Cyber security',  44, '44%', 37, '37%', 18, '18%'],
-      ['Additional costs',  54, '54%', 36, '36%', 9, '9%']
+      ['Total', 'Legend 1', {role: 'annotation'}, 'Legend 2', {role: 'annotation'}, 'Legend 3', {role: 'annotation'}],
+      ['Data 1',  27, '27%', 49, '49%', 24, '24%'],
+      ['Data 2',  29, '29%', 21, '21%', 50, '50%'],
+      ['Data 3',  32, '32%', 49, '49%', 20, '20%'],
+      ['Data 4',  33, '33%', 49, '49%', 17, '17%'],
+      ['Data 5',  34, '34%', 42, '42%', 23, '23%'],
     ]);
 
     var dataMale = google.visualization.arrayToDataTable([
-      ['Total', 'Major Obstacle', {role: 'annotation'}, 'Minor Obstacle', {role: 'annotation'}, 'No Obstacle', {role: 'annotation'}],
-      ['Usability',  23, '23%', 51, '51%', 26, '26%'],
-      ['Features and services are not producing enough added value',  26, '26%', 46, '46%', 27, '27%'],
-      ['Lack of quality of the technology',  29, '29%', 50, '50%', 21, '21%'],
-      ['Maturity of the technology',  30, '30%', 52, '52%', 18, '18%'],
-      ['Safety concerns',  30, '30%', 42, '42%', 28, '28%'],
-      ['Lack of trust in the technology',  39, '39%', 38, '38%', 23, '23%'],
-      ['Privacy concerns',  39, '39%', 37, '37%', 24, '24%'],
-      ['Cyber security',  39, '39%', 39, '39%', 22, '22%'],
-      ['Additional costs',  51, '51%', 38, '38%', 11, '11%']
+      ['Total', 'Legend 1', {role: 'annotation'}, 'Legend 2', {role: 'annotation'}, 'Legend 3', {role: 'annotation'}],
+      ['Data 1',  23, '23%', 51, '51%', 26, '26%'],
+      ['Data 2',  26, '26%', 46, '46%', 27, '27%'],
+      ['Data 3',  29, '29%', 50, '50%', 21, '21%'],
+      ['Data 4',  30, '30%', 52, '52%', 18, '18%'],
+      ['Data 5',  30, '30%', 49, '49%', 21, '21%'],
     ]);
 
     var dataFemale = google.visualization.arrayToDataTable([
-      ['Total', 'Major Obstacle', {role: 'annotation'}, 'Minor Obstacle', {role: 'annotation'}, 'No Obstacle', {role: 'annotation'}],
-      ['Usability',  31, '31%', 47, '47%', 22, '22%'],
-      ['Features and services are not producing enough added value',  32, '32%', 45, '45%', 23, '23%'],
-      ['Lack of quality of the technology',  34, '34%', 48, '48%', 18, '18%'],
-      ['Maturity of the technology',  36, '36%', 46, '46%', 17, '17%'],
-      ['Safety concerns',  39, '39%', 43, '43%', 19, '19%'],
-      ['Lack of trust in the technology',  44, '44%', 38, '38%', 18, '18%'],
-      ['Privacy concerns',  50, '50%', 34, '34%', 16, '16%'],
-      ['Cyber security',  50, '50%', 35, '35%', 15, '15%'],
-      ['Additional costs',  58, '58%', 34, '34%', 8, '8%']
+      ['Total', 'Legend 1', {role: 'annotation'}, 'Legend 2', {role: 'annotation'}, 'Legend 3', {role: 'annotation'}],
+      ['Data 1',  31, '31%', 47, '47%', 22, '22%'],
+      ['Data 2',  32, '32%', 45, '45%', 23, '23%'],
+      ['Data 3',  34, '34%', 48, '48%', 18, '18%'],
+      ['Data 4',  36, '36%', 46, '46%', 17, '17%'],
+      ['Data 5',  39, '39%', 43, '43%', 19, '19%'],
     ]);
 
 /* Customizing the chart */
     var options = {
-      title: 'Connected Cars Study',
+      title: 'Horizontal Bar Chart Sample',
       titleTextStyle: {
         color: '#000000',
         fontName: 'Montserrat',
@@ -58,7 +46,7 @@
           position:"bottom", 
           alignment:"center", 
           textStyle: {
-                    fontSize: 12, 
+                    fontSize: 14, 
                     fontName: 'Montserrat'}
           },  // Legend styling
       tooltip: {
@@ -76,7 +64,7 @@
           alwaysOutside: false,
           textStyle: {
             fontName: 'Montserrat',
-            fontSize: 12, 
+            fontSize: 14, 
             bold:true,
             auraColor: '#eee',
             color: '#FFFFFF'
@@ -102,7 +90,7 @@
                   textStyle: {
                      fontName: 'Montserrat',
                      color: '#000000',
-                     fontSize: 11,
+                     fontSize: 15,
                      bold: true
                   },
                },  // Vertical Axis configuration
