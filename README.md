@@ -4,9 +4,9 @@ How to create an interactive <a href="https://developers.google.com/chart/intera
 I wanted to know how to create a horizontal bar chart which changes the data shown when a specific button is pressed.
 <br>
 <br>
-Here is the <a href="https://github.com/DavidJKTofan/HorizontalBarChart/blob/master/All_in_one_page.html" target="_blank">entire HTML page</a> to preview in any HTML editor. 
+Here is the <a href="https://github.com/DavidJKTofan/Interactive-Horizontal-Bar-Chart/blob/master/All_in_one_page.html" target="_blank">entire HTML page</a> to preview in any HTML editor. 
 <br>
-Additionally, the files can also be found separated into <a href="https://github.com/DavidJKTofan/HorizontalBarChart/blob/master/CSS/main.css" target="_blank">main.css</a>, <a href="https://github.com/DavidJKTofan/HorizontalBarChart/blob/master/JavaScript/googlechart.js" target="_blank">googlechart.js</a> and the <a href="https://github.com/DavidJKTofan/HorizontalBarChart/blob/master/index.html" target="_blank">index.html</a>.
+Additionally, the files can also be found separated into <a href="https://github.com/DavidJKTofan/Interactive-Horizontal-Bar-Chart/blob/master/CSS/main.css" target="_blank">main.css</a>, <a href="https://github.com/DavidJKTofan/Interactive-Horizontal-Bar-Chart/blob/master/JavaScript/googlechart.js" target="_blank">googlechart.js</a> and the <a href="https://github.com/DavidJKTofan/Interactive-Horizontal-Bar-Chart/blob/master/index.html" target="_blank">index.html</a>.
 ## Programming Languages
 The following programming languages have been used to create the chart: HTML5, CSS and JavaScript.
 
