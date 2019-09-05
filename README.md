@@ -20,7 +20,7 @@ If you are interested in learning more about Google Charts, check out the <a hre
 My name is David and I've just started to learn programming in general (mid-2019). Google Charts are free to use and I simply adapted some of the code found in the documentation.
 <br>
 <br>
-This is one of my first projects :) so please don't be too harsh on me.
+This is one of my first projects (just for fun) :) so please don't be too harsh on me.
 <br>
 <br>
 Want to get in touch? Write me on <a href="https://www.linkedin.com/in/davidtofan" target="_blank">LinkedIn</a>.
