@@ -39,6 +39,9 @@
         bold: true,
         italic: false
        },  // CSS of the Title text
+       sort: 'event',  // Sorting of the data
+       sortAscending: false,  // Sorting in ascending order
+       sortColumn: 1,
       height: '100%',
       width: '100%',
       bar: {groupWidth: '50%'},  // Bar width
@@ -98,6 +101,11 @@
                colors:['#003E7D', '#F46B1B', '#A7C246']  // Bar Colors 
             };
 
+/* Sorting of Data */
+	dataTotal.sort([{column: 1, desc:true}]);
+	dataMale.sort([{column: 1, desc:true}]);
+	dataFemale.sort([{column: 1, desc:true}]);
+	  
 /* Event Listener */
     var chart = new google.visualization.BarChart(document.getElementById('chart_div'));
     chart.draw(dataTotal, options);
