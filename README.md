@@ -1,4 +1,4 @@
-# Interactive Horizontal Bar Chart
+# Interactive Charts
 How to create an interactive <a href="https://developers.google.com/chart/interactive/docs/gallery/barchart" target="_blank">Horizontal Bar Chart</a> with <a href="https://developers.google.com/chart/" target="_blank">Google Charts</a>?
 <br>
 It all started with me wanting to know how to create a horizontal bar chart which changes the data shown when a specific button is pressed.
