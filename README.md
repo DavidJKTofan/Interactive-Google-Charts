@@ -4,7 +4,7 @@ How to create an interactive <a href="https://developers.google.com/chart/intera
 It all started with me wanting to know how to create a horizontal bar chart which changes the data shown when a specific button is pressed.
 <br>
 <br>
-Here is the <a href="https://github.com/DavidJKTofan/Interactive-Google-Charts/blob/master/Examples/BarChart-Buttons.html" target="_blank">BarChart</a> to preview in any HTML editor or browser. 
+Here is the <a href="https://github.com/DavidJKTofan/Interactive-Google-Charts/blob/master/BarChart-Buttons.html" target="_blank">BarChart</a> to preview in any HTML editor or browser. 
 <br>
 <br>
 More examples of other Charts can be found here <a href="https://github.com/DavidJKTofan/Interactive-Google-Charts/tree/master/Examples" target="_blank">More Charts</a>
