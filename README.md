@@ -1,14 +1,16 @@
 # Interactive Horizontal Bar Chart
 How to create an interactive <a href="https://developers.google.com/chart/interactive/docs/gallery/barchart" target="_blank">Horizontal Bar Chart</a> with <a href="https://developers.google.com/chart/" target="_blank">Google Charts</a>?
 <br>
-I wanted to know how to create a horizontal bar chart which changes the data shown when a specific button is pressed.
+It all started with me wanting to know how to create a horizontal bar chart which changes the data shown when a specific button is pressed.
 <br>
 <br>
-Here is the <a href="https://github.com/DavidJKTofan/Interactive-Horizontal-Bar-Chart/blob/master/All_in_one_page.html" target="_blank">entire HTML page</a> to preview in any HTML editor. 
+Here is the <a href="https://github.com/DavidJKTofan/Interactive-Google-Charts/blob/master/Examples/BarChart-Buttons.html" target="_blank">BarChart</a> to preview in any HTML editor or browser. 
 <br>
-Additionally, the files can also be found separated into <a href="https://github.com/DavidJKTofan/Interactive-Horizontal-Bar-Chart/blob/master/CSS/main.css" target="_blank">main.css</a>, <a href="https://github.com/DavidJKTofan/Interactive-Horizontal-Bar-Chart/blob/master/JavaScript/googlechart.js" target="_blank">googlechart.js</a> and the <a href="https://github.com/DavidJKTofan/Interactive-Horizontal-Bar-Chart/blob/master/index.html" target="_blank">index.html</a>.
+<br>
+More examples of other Charts can be found here <a href="https://github.com/DavidJKTofan/Interactive-Google-Charts/tree/master/Examples" target="_blank">More Charts</a>
+
 ## Programming Languages
-The following programming languages have been used to create the chart: HTML5, CSS and JavaScript.
+The following programming languages have been used to create the chart: HTML5, CSS and JavaScript (Google Charts).
 
 ## Responsive Chart
 In order to adapt the size of the chart and make it responsive, you'll have to play with the ChartArea in the JS file, the CSS @media part, as well as the HTML div size (or other layout elements) where the chart should appear.
