@@ -1,0 +1,234 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<head>
+  <style type="text/css">
+    body {
+      font-family: Montserrat, sans-serif;
+    }
+
+    .headerRow {
+      font-family: Montserrat, sans-serif;
+    }
+
+    .google-visualization-table-type-number {
+      text-align: center;
+    }
+
+    .hoverTableRow {
+      background-color: #003E7D !important;
+      color: #FFF;
+    }
+
+    .tableCell {
+      font-family: Montserrat, sans-serif;
+      /* text-align: center; */
+    }
+
+    .selectedTableRow {
+      background-color: #A7C246 !important;
+      font-weight: bold;
+    }
+  </style>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+  <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+  <script type="text/javascript">
+    google.charts.load("current", {packages: ["controls"]}).then(function() {
+      // Prepare the data
+
+      var data = google.visualization.arrayToDataTable([
+        ["Provider", "Peer Group", "KPIs", "Amount", {role: "annotation"}, {role: "style"}, "Ranking"],
+
+        ["Company 1", "Americas", "KPI 1", 8.2, "8.2", "#003E7D", 3],
+        ["Company 1", "Americas", "KPI 2", 10.0, "10.0", "#003E7D", 1],
+        ["Company 1", "Americas", "KPI 3", 4.3, "4.3", "#003E7D", 6],
+
+        ["Company 2", "Americas", "KPI 1 ", 9.1, "9.1", "#003E7D", 2],
+        ["Company 2", "Americas", "KPI 2", 5.4, "5.4", "#003E7D", 5],
+        ["Company 2", "Americas", "KPI 3", 7.7, "7.7", "#003E7D", 4],
+
+        ["Company 1", "EMEA", "KPI 1", 10.0, "10.0", "#003E7D", 1],
+        ["Company 1", "EMEA", "KPI 2", 2.3, "2.3", "#003E7D", 6],
+        ["Company 1", "EMEA", "KPI 3", 8.1, "8.1", "#003E7D", 2],
+
+        ["Company 2", "EMEA", "KPI 1", 5.8, "5.8", "#003E7D", 5],
+        ["Company 2", "EMEA", "KPI 2", 7.3, "7.3", "#003E7D", 3],
+        ["Company 2", "EMEA", "KPI 3", 6.3, "6.3", "#003E7D", 4],
+
+        ["Company 1", "UK", "KPI 1", 3.5, "3.5", "#003E7D", 3],
+        ["Company 1", "UK", "KPI 2", 1.8, "1.8", "#003E7D", 5],
+        ["Company 1", "UK", "KPI 3", 1.1, "1.1", "#003E7D", 6],
+
+        ["Company 2", "UK", "KPI 1", 5.1, "5.1", "#003E7D", 1],
+        ["Company 2", "UK", "KPI 2", 3.3, "3.3", "#003E7D", 4],
+        ["Company 2", "UK", "KPI 3", 4.3, "4.3", "#003E7D", 2],
+
+        ["Company 1", "FR", "KPI 1", 9.5, "9.5", "#003E7D", 1],
+        ["Company 1", "FR", "KPI 2", 8.7, "8.7", "#003E7D", 2],
+        ["Company 1", "FR", "KPI 3", 7.9, "7.9", "#003E7D", 4],
+
+        ["Company 2", "FR", "KPI 1", 8.1, "8.1", "#003E7D", 3],
+        ["Company 2", "FR", "KPI 2", 5.4, "4.4", "#003E7D", 6],
+        ["Company 2", "FR", "KPI 3", 7.4, "7.4", "#003E7D", 5]
+
+      ]);
+
+      // Define category pickers for "Provider", "Peer Group"
+      var providerPicker = new google.visualization.ControlWrapper({
+        controlType: "CategoryFilter",
+        containerId: "control1",
+        dataTable: data,
+        options: {
+          filterColumnLabel: "Provider",
+          ui: {
+            labelStacking: "vertical",
+            allowTyping: false,
+            allowMultiple: false,
+            caption: "Choose Provider",
+            sortValues: true,
+            allowNone: false
+          }
+        }
+      });
+
+      var regionPicker = new google.visualization.ControlWrapper({
+        controlType: "CategoryFilter",
+        containerId: "control2",
+        dataTable: data,
+        options: {
+          filterColumnLabel: "Peer Group",
+          ui: {
+            labelStacking: "vertical",
+            allowTyping: false,
+            allowMultiple: false,
+            caption: "Choose Peer Group",
+            sortValues: false,
+            allowNone: false
+          }
+        }
+      });
+
+      // Define a bar chart to show "Amount" data
+      var barChart = new google.visualization.ChartWrapper({
+        chartType: "BarChart",
+        containerId: "chart1",
+        options: {
+          annotations: {
+            textStyle: {
+              fontName: "Montserrat",
+              fontSize: 12,
+              bold: true
+            },
+            alwaysOutside: true
+          },
+          legend: "none",
+          bar: {
+            groupWidth: "50%"
+          },
+          animation: {
+            duration: 600,
+          },
+          hAxis: {
+            minValue: 0,
+            maxValue: 1,
+            ticks: [0, 2, 4, 6, 8, 10],
+            gridlines: {
+              color: "#d3d3d3"
+            },
+            textStyle: {
+              color: "#003E7D",
+              fontSize: 15,
+              fontName: "Montserrat",
+              bold: false,
+            },
+          },
+          vAxis: {
+            textStyle: {
+              fontName: "Montserrat",
+              color: "#003E7D",
+              fontSize: 11
+            },
+          },
+        },
+        // Configure the barChart to use columns 2 (KPIs), 3 (Amount), 4 (Label), and 5 (style/colors)
+        view: {
+          "columns": [2, 3, 4, 5]
+        }
+      });
+
+      // Add CSS to the table (see code at the top in the <style> area)
+      var cssClassNames = {
+        headerRow: "headerRow",
+        tableRow: "tableRow",
+        oddTableRow: "oddTableRow",
+        selectedTableRow: "selectedTableRow",
+        hoverTableRow: "hoverTableRow",
+        headerCell: "headerCell",
+        tableCell: "tableCell",
+        rowNumberCell: "rowNumberCell"
+      };
+
+      var table = new google.visualization.ChartWrapper({
+        chartType: "Table",
+        containerId: "chart2",
+        options: {
+          // width: "400px",
+          allowHtml: true,
+          cssClassNames: cssClassNames,
+          sort: "disable",
+        },
+        view: {
+          "columns": [2, 6]
+        }
+      });
+
+      // Add state change event listeners
+      google.visualization.events.addListener(providerPicker, "statechange", stateChange);
+      google.visualization.events.addListener(regionPicker, "statechange", stateChange);
+
+      // Draw controls
+      providerPicker.draw();
+      regionPicker.draw();
+
+      // Draw charts
+      stateChange();
+
+      function stateChange() {
+        // Build data view, filter based on category filters
+        var view = new google.visualization.DataView(data);
+        view.setRows(view.getFilteredRows([{
+          column: 0,
+          value: providerPicker.getState().selectedValues[0]
+        }, {
+          column: 1,
+          value: regionPicker.getState().selectedValues[0]
+        }]));
+
+        view = view.toDataTable();
+        view.sort({column: 3,desc: true});
+
+        // Draw charts
+        barChart.setDataTable(view);
+        table.setDataTable(view);
+        barChart.draw();
+        table.draw();
+      }
+    });
+  </script>
+</head>
+<body style="font-family: Arial;border: 0 none;">
+  <div id="dashboard">
+    <table>
+      <tr style="vertical-align: top">
+        <td style="width: 200px; font-size: 0.9em;">
+          <div id="control2" style="margin-top: 50px;"></div>
+          <div id="control1" style="margin-top: 10px;"></div>
+        </td>
+        <td style="width: 800px;">
+          <div style="width: 800px; height: 800px; margin-top: -50px;" id="chart1"></div>
+        </td>
+        <td style="width: 400px;">
+          <div style="width: 300px; height: 800px; margin-top: 80px;" align="left" id="chart2"></div>
+        </td>
+      </tr>
+  </div>
+</body>
+</html>
